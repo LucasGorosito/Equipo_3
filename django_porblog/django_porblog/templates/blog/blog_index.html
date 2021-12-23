@@ -1,0 +1,110 @@
+{% extends "base.html" %}  
+{% load static %}
+
+{% block contenido %}
+
+<div class="container-fluid py-5" id="about">
+    <div class="container">
+        <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">ODS</h1>
+            <h1 class="position-absolute text-uppercase text-primary">Desarrollo sustentable</h1>
+        </div>
+        <p>Los Objetivos de Desarrollo Sostenible buscan erradicar la pobreza, proteger el planeta y asegurar la prosperidad para todos como parte de una nueva agenda 2030. <br> Cada objetivo tiene metas específicas que la Argentina aplicará dependiendo de su realidad económica, social y ambiental.</p>
+        
+        <p>Los temas implicados en estos Objetivos y metas apuntan a erradicar el hambre y lograr la seguridad alimentaria; garantizar una vida sana y una educación de calidad; lograr la igualdad de género; asegurar el acceso al agua y la energía sustentable; promover el crecimiento económico sostenido; adoptar medidas urgentes contra el cambio climático; promover la paz; facilitar el acceso a la justicia y fortalecer una alianza mundial para el desarrollo sostenible.</p>
+        
+        <p>Esta iniciativa, que instala la vinculación de la sostenibilidad ambiental con la inclusión social y atención de las necesidades de los más vulnerables, entró en vigencia el 1 de enero del 2016.</p>
+        <div class="row align-items-center">
+            <div class="col-lg-5 pb-4 pb-lg-0">
+                <img class="img-fluid rounded w-100" src="{% static 'img/undraw_connected_world_wuay.svg' %}" alt="">
+            </div>
+            <div class="col-lg-7">
+                <h3 class="mb-4">Institucional ODS</h3>
+                <p>A través del <b>Decreto 499/2017</b>, es el organismo responsable de coordinar las acciones necesarias para la efectiva implementación de la <b>“Agenda 2030 para el Desarrollo Sostenible”</b> aprobada por la Resolución Nº 70/1 de la <b>Asamblea General de las Naciones Unidas</b> de fecha 25 de septiembre de 2015, con intervención de las áreas competentes de la Administración Pública Nacional.</p>
+                <div class="row mb-3">
+                    <div class="col-sm-6 py-2"><h6>Agenda: <span class="text-secondary">2030 para el desarrollo sostenible</span></h6></div>
+                    <div class="col-sm-6 py-2"><h6>Objetivo: <span class="text-secondary">Transformar nuestro mundo.</span></h6></div>
+                    <div class="col-sm-6 py-2"><h6>Fecha: <span class="text-secondary">la Agenda 2030 (A/RES/69-315) se aprobó en septiembre de 2015</span></h6></div>
+                    <div class="col-sm-6 py-2"><h6>Lugar: <span class="text-secondary">Cumbre Mundial sobre el Desarrollo Sostenible realizada en Nueva York</span></h6></div>
+                    <div class="col-sm-6 py-2"><h6>Miembros: <span class="text-secondary">Los Estados Nacionales miembros de la Organización de Naciones Unidas (ONU) aprobaron en dicho documento 17 Objetivos y 169 Metas que deberán ser cumplidos de aquí al 2030.</span></h6></div>
+                </div>
+                <a href="https://www.un.org/sustainabledevelopment/es/development-agenda/" class="btn btn-outline-primary">Ver más</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="titulo">
+        <img class='logo' src="{% static 'img/logo.png' %}" alt="">
+    </div>
+    
+    <section class="list">
+        <div class="item">
+            <a href="{% url 'blog_category' 'Fin de la pobreza' %}"> <img src="{% static 'img/01.jpg' %}" alt=""></a>
+        </div>
+        <div class="item">
+            <a href="{% url 'blog_category' 'Hambre cero' %}"><img src="{% static 'img/02.jpg' %}" alt=""></a>
+        </div>
+        <div class="item">
+            <a href="{% url 'blog_category' 'Bienestar' %}"><img src="{% static 'img/03.jpg' %}" alt="" ></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'img/04.jpg' %}" alt="" ></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'img/05.jpg' %}" alt=""></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'img/06.jpg' %}" alt=""></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'img/07.jpg' %}" alt=""></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'img/08.jpg' %}" alt=""></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'img/09.jpg' %}" alt=""></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'img/10.jpg' %}" alt=""></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'img/11.jpg' %}" alt=""></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'img/12.jpg' %}" alt=""></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'img/13.jpg' %}" alt=""></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'img/14.jpg' %}" alt=""></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'img/15.jpg' %}" alt=""></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'img/16.jpg' %}" alt=""></a>
+        </div>
+        <div class="item">
+            <a href="#"><img src="{% static 'img/17.jpg' %}" alt=""></a>
+        </div>
+    </section>
+</div>
+
+
+<div class="centerstage">
+
+
+    {% for post in posts %}
+        <div class="post">
+
+            <h1><a href="{% url 'blog_detail' id=post.pk %}">{{ post.title }}</a></h1>
+            <div class="date">
+                <p>Published on: {{ post.published_date|date:"D M Y"}}</p>
+            </div>
+            <a href="{% url 'blog_detail' id=post.pk %}">Comments: {{ post.approve_comments.count }}</a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block contenido %}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Mundo</title>
+    <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="titulo">
+        <h1>Desarrolladores</h1>
+    </div>
+    
+    <section class="list">
+        <div class="item">
+           <a href="#"><img src="{% static 'img/Lucas.jpg' %}" alt="Lucas Jose Gorosito"></a> 
+           <a href="#"><h2>Lucas Jose Gorosito</h2></a> 
+         </div>
+        <div class="item">
+            
+            <a href=""><img src="{% static 'img/Franco.jpg' %}" alt="Franco Leandro Iturri"></a>
+            <a href="#"><h2>Franco Leandro Iturri</h2></a>
+        </div>
+
+        <div class="item">
+            <a href="#"><img src="{% static 'img/Dardo.jpg' %}" alt="Dardo Daniel Iramain"></a>
+            <a href="#"><h2>Dardo Daniel Iramain</h2></a>
+        </div>
+
+        <div class="item">
+           <a href="#"><img src="{% static 'img/Maxi.jpg' %}" alt="Maximiliano Ezequiel De los Santos" ></a>
+           <a href="#"><h2>Maximiliano E. De los Santos</h2></a>
+        </div>
+
+        <div class="item">
+           <a href="#"><img src="{% static 'img/David.jpg' %}" alt="David Alfredo Rios"></a> 
+           <a href="#"><h2>David Alfredo Rios</h2></a> 
+        </div>
+
+        <div class="item">
+           <a href="#"><img src="{% static 'img/Jose.jpg' %}" alt="Jose Ignacio Alegre"></a> 
+           <a href="#"><h2>Jose Ignacio Alegre</h2></a> 
+        </div>
+
+        <div class="item">
+           <a href="#"><img src="{% static 'img/Joel.jpg' %}" alt="Joel Luque"></a> 
+           <a href="#"><h2>Joel Luque</h2></a> 
+        </div>
+        <div class="item">         
+    </section>
+{% endblock %}
